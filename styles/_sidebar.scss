@@ -1,0 +1,60 @@
+/*Using the mixin function for the flex styling*/
+.flex-container {
+    @include flexStart(column);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    overflow-y: auto;
+    height: 100%;
+    padding-left: 45px;
+}
+
+/*Using nested styles on the header and a color variable*/
+header {
+    flex: 2;
+    order: 1;
+    .portrait img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        width: 160px;
+        border: .625rem solid $grey;
+        border-radius: 50%;
+    }
+    /*Used a mixin function and a variable on social links*/
+    .social-links {
+        @include flexStart(row);
+        margin-top: 20px;
+        padding-top: 20px;
+        width: 120px;
+        transition: transform .2s;
+        :hover {
+            transform: scale(.9);
+        }
+    }
+}
+
+nav {
+    flex: 2.5;
+    order: 3;
+}
+
+/*Using nested styles on the footer*/
+footer {
+    flex: .4;
+    order: 4;
+    .footer-text {
+        font-size: .8rem;
+        margin-bottom: 2px;
+    }
+    .logo {
+        margin-left: 50px;
+        margin-bottom: 20px;
+        display: block;
+        width: 100px;
+    }
+}

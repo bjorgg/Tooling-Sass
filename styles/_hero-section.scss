@@ -1,0 +1,20 @@
+/*Using nested styles on the hero section*/
+.hero {
+    background-image: url('../images/aleesha-hero.jpg');
+    margin-left: 300px;
+    margin-right: 0;
+    height: 100%;
+    width: calc(100% - 300px);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    .qoute {
+        max-width: 70%;
+        margin-bottom: 40px;
+        margin-right: 54px;
+    }
+}

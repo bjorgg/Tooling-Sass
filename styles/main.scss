@@ -1,0 +1,79 @@
+/*Variables for colors*/
+$grey: #444040;
+$white: #fafcfe;
+$purple: #5d3085;
+
+/*Mixin function with one variable for flex styling*/
+@mixin flexStart($direction) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: $direction;
+}
+
+/*Importing the sub scss files*/
+@import './sidebar';
+@import './hero-section';
+
+/*Setting padding and margin 0 for all elements*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Body and headings styling, using variables for color*/
+body, html {
+    font-family: 'Lato', sans-serif;
+    color: $grey;
+    height: 100%;
+    background-color: $white;
+}
+
+h1 {
+    font-size: 3.8rem;
+    line-height: 4.9rem;
+    color: $white;
+    font-weight: 900;
+    text-align: right;
+}
+
+h2 {
+    font-family: 'Lobster Two', cursive;
+    font-size: 2rem;
+    line-height: 1.7rem;
+    color: $grey;
+    text-align: right;
+    font-style: italic;
+    font-weight: 700;
+}
+
+/*h3 inherits some styling from h2*/
+.h3 {
+    @extend h2;
+    font-size: 1.625rem;
+    line-height: 1.5rem;
+    color: $purple;
+}
+
+/*Using nested styles for the list and variables for color*/
+ul {
+    font-weight: 900;
+    font-size: 1.2rem;
+    list-style-type: none;
+    width: 60px;
+    li a {
+        display: block;
+        color: $grey;
+        padding: .5rem 1rem .5rem 0;
+        text-decoration: none;
+    }
+    li a:hover {
+        color: $purple;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    html { 
+        font-size: 10px;
+    }
+}
