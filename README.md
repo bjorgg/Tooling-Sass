@@ -8,5 +8,3 @@ The 5 aspects of Sass I used are:
    - Created a mixin function with on variable for flex styling and used it on two elements.
    - Nested styles on multiple elements.
    - Created two sub scss files to simplify and imported them to the main scss file
-
-Public url: 
